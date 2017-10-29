@@ -1,9 +1,7 @@
 package main;
 
-import lib.Araba;
-import lib.BenzinliMotor;
-import lib.LpgliMotor;
-import lib.Motor;
+import lib.VideoCamera;
+import lib.VideoPlayer;
 
 /**
  *
@@ -13,21 +11,23 @@ public class InterfaceFirstExample {
 
     public static void main(String[] args) {
         
-        Motor benzinliMotor = new BenzinliMotor();
-        Motor lpgliMotor = new LpgliMotor();
+        VideoCamera videoCamera1 = new VideoCamera();
+        videoCamera1.welcome();
         
-        Araba benzinliAraba = new Araba(benzinliMotor);
-        Araba lpgliAraba = new Araba(lpgliMotor);
+        System.out.println("Kaydedilen video: " + videoCamera1.record());
+        System.out.println("Kaydedilen video: " + videoCamera1.record());
+        System.out.println("Kaydedilen video: " + videoCamera1.record());
         
-        benzinliAraba.calistir();
-        lpgliAraba.calistir();
+        videoCamera1.play("Manus baba - etegi belinde");
+        videoCamera1.pause("Manus baba - etegi belinde");
+        videoCamera1.stop("Manus baba - etegi belinde");
         
-        benzinliAraba.durdur();
-        lpgliAraba.durdur();
-        
-        benzinliAraba.setMotor(lpgliMotor);
-        benzinliAraba.calistir();
-        benzinliAraba.durdur();
+        VideoPlayer videoPlayer1 = new VideoPlayer();
+        videoPlayer1.play("Gazapizm - heyecani yok");
+        videoPlayer1.setConnectedDisplay("TV");
+        videoPlayer1.play("Gazapizm - heyecani yok");
+        videoPlayer1.pause("Gazapizm - heyecani yok");
+        videoPlayer1.stop("Gazapizm - heyecani yok");
     }
     
 }
