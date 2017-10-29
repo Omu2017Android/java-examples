@@ -31,7 +31,7 @@ public class BigDecimalExample {
         System.out.println("firstNumber * secondNumber = " + firstNumber.multiply(secondNumber));
         System.out.println("secondNumber / 3 = " + secondNumber.divide(new BigDecimal("3"), 2, RoundingMode.HALF_DOWN));
         
-        System.out.println("firstNumber - 100 and abs: " + firstNumber.subtract(new BigDecimal("100").plus()));
+        System.out.println("firstNumber - 100 and abs: " + firstNumber.subtract(new BigDecimal("100")).abs());
     }
 
 }

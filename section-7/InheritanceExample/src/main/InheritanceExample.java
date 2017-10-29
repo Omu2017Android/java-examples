@@ -19,8 +19,12 @@ public class InheritanceExample {
         
         System.out.println("muhendis1: " + muhendis1.toString());
         
+        System.out.println("muhendis1 getMaas: " + muhendis1.getMaas());
+        
         Calisan muhendis1Calisan = muhendis1;
         muhendis1Calisan.setMaas(3400);
+        
+        System.out.println("updated muhendis1Calisan -> muhendis1 getMaas: " + muhendis1.getMaas());
         
         System.out.println("muhendis1Calisan: " + muhendis1Calisan);
     }

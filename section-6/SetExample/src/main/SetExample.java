@@ -32,6 +32,7 @@ public class SetExample {
         System.out.println("setA: " + setA);
         
         System.out.println("setA contains 'E': " + setA.contains('E'));
+        System.out.println("setA contains 'M': " + setA.contains('M'));
         
         setA.addAll(Arrays.asList('C', 'K', 'U', 'L'));
         
